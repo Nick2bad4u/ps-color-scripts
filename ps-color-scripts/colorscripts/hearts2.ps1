@@ -1,4 +1,4 @@
-﻿$esc = [char]27
+$esc = [char]27
 
 # Colors - Using a more vibrant palette
 $c1 = "$esc[38;5;196m"  # Bright red
