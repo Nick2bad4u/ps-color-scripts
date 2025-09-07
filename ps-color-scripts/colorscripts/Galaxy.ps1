@@ -2,15 +2,15 @@
 $esc = [char]27
 $w = 100
 $h = 12
-$rand = New-Object System.Random
 $stars = 140
 $grid = @()
 for ($i=0; $i -lt $h; $i++) { $grid += ,(@(" " * $w).ToCharArray()) }
 
 for ($s=0; $s -lt $stars; $s++) {
-    $x = $rand.Next(0,$w)
-    $y = $rand.Next(0,$h)
-    $depth = $rand.NextDouble()
+    $x = Get-Random -Minimum 0 -Maximum $w
+    $y = Get-Random -Minimum 0 -Maximum $h
+    $depth = Get-Random
+    $depth = $depth / [int]::MaxValue
     $char = if ($depth -lt 0.3) { "." } elseif ($depth -lt 0.6) { "•" } else { "✶" }
     $grid[$y][$x] = $char
 }
