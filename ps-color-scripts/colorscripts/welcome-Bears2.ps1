@@ -14,7 +14,7 @@ $bearLines = @(
 )
 
 # Define gradient colors (ANSI codes)
-$colors = @(31, 33, 32, 34, 35, 38)  # Red, Yellow, Green, Blue, Magenta
+$colors = @(31, 33, 32, 34, 35, 37)  # Red, Yellow, Green, Blue, Magenta, White
 
 # Number of repeats
 $repeatCount = 6
